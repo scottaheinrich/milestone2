@@ -162,11 +162,12 @@ function Game(rocket, safeVelocity, crashVelocity) {
         gCtx.fillRect(128, 290, 10, 10);
         // Give message based on result
         if(finalSpeed < 1.5) {
-          alert("You have won! Your landing speed was: " + finalSpeed);
+          alert("You have won! Your landing speed was: " + finalSpeed + ", and your fuel level was: " + fuel);
         } else {
-          alert("You have lost, you crashed because your landing speed was: " + finalSpeed);
+          alert("You have lost, you crashed because your landing speed was: " + finalSpeed + ", and your fuel level was: " + fuel);
         }
         window.location = "../scores.html";
+
       }
       alti = alt
       document.getElementById("speedLabel").innerHTML = "Speed: " + speed.toFixed(2) + " --- Fuel: " + fuel;
